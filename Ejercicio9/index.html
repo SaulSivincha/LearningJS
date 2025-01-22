@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Noticias</title>
+</head>
+<body>
+  <header>
+    <h1>Gestor de Noticias</h1>
+  </header>
+
+  <section id="info">
+    <h2>Información del Navegador</h2>
+    <div id="navegador"></div>
+  </section>
+
+  <section id="noticias">
+    <h2>Noticias</h2>
+    <button id="obtenerNoticias">Obtener Noticias</button>
+    <ul id="listaNoticias"></ul>
+  </section>
+
+  <section>
+    <h2>Preferencias</h2>
+    <label for="categoria">Categoría:</label>
+    <select id="categoria">
+      <option value="general">General</option>
+      <option value="technology">Tecnología</option>
+      <option value="sports">Deportes</option>
+    </select>
+    <button id="guardarPreferencia">Guardar Preferencia</button>
+  </section>
+
+  <script type="module" src="./App.js"></script>
+</body>
+</html>
+
