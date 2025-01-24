@@ -6,3 +6,6 @@ console.log(libro1.obtenerResumen());
 
 const revista1 = new Revista('National Geographic', 'Varios Autores', 2023, 150, 5);
 console.log(revista1.obtenerResumen());
+
+const publicacionReciente = Publicacion.compararAnios(libro1, revista1);
+console.log(`La publicación más reciente es: ${publicacionReciente.titulo}`);
