@@ -3,7 +3,11 @@ const listaLi = document.querySelectorAll("li");
 
 function cambiarColor(){
  const liColorRed = listaLi[2];
-	liColorRed.style.color = "red";
+	if (liColorRed.style.color !== "red"){
+	 liColorRed.style.color = "red";
+	}	else {
+  liColorRed.style.color = "blue";
+	}
 }
 
 boton.addEventListener("click", cambiarColor);
