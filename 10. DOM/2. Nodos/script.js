@@ -1,25 +1,33 @@
 const botonCrear = document.getElementById("BotonCrear");
-const contenedorParrafo = document.querySelector(".ContenedorParrafo");
-const botonEliminar = document.createElement('button');
-const parrafoRandom = document.createElement('p');
+const contenedorPrincipal = document.querySelector(".ContenedorParrafoBoton");
 
-botonCrear.addEventListener("click", crearParrafo);
+botonCrear.addEventListener("click", crearContenedorIndividual);
 
-function crearParrafo(){
-	parrafoRandom.textContent = selectParrafo();
-	contenedorParrafo.appendChild(parrafoRandom);
-	agregarBotonEliminar();
+function crearContenedorIndividual() {
+    const contenedorIndividual = document.createElement('div');
+    contenedorIndividual.className = "ContenedorIndividual";
+
+    const parrafoRandom = document.createElement('p');
+    parrafoRandom.textContent = selectParrafo();
+    contenedorIndividual.appendChild(parrafoRandom);
+
+    const botonEliminar = document.createElement('button');
+    botonEliminar.textContent = "Eliminar";
+    botonEliminar.addEventListener("click", () => {
+        contenedorIndividual.remove();
+    });
+    contenedorIndividual.appendChild(botonEliminar);
+
+    contenedorPrincipal.appendChild(contenedorIndividual);
 }
 
 function selectParrafo() {
- const parrafos = ["Hola, se supone que esto es un parrafo",
-	                    "No recuerdo como se hacen muchas cosas en JS",
-	                    "Canonizen el SENGIE",
-	                    "Tengo hambre"];
- return parrafos[Math.floor(Math.random() * 4)];
+    const parrafos = [
+        "Hola, se supone que esto es un parrafo",
+        "No recuerdo como se hacen muchas cosas en JS",
+        "Canonizen el SENGIE",
+        "Tengo hambre"
+    ];
+    return parrafos[Math.floor(Math.random() * parrafos.length)];
 }
 
-function agregarBotonEliminar(){
- botonEliminar.value = "Eliminar";
-	contenedorParrafo.appendChild(parrafoRandom);
-}
