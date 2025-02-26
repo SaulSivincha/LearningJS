@@ -1,0 +1,112 @@
+:root {
+	--color-primary: #050505;
+	--color-text: #F2F2F2;
+	--color-textEspecial: #28C96B;
+	--color-error: #E64A4F;
+	--color-secondary:#28C96B;
+ --border-style: none;
+	--icons-size: 22px;
+	--text-size-resultado: 40px;
+	--text-size-operaciones: 30px;
+	--color-operaciones: #191919;
+}
+
+html {
+ background: var(--color-primary);
+}
+
+main {
+ display: grid;
+ justify-content: center;
+	align-content: center;
+	height: 100vh;
+}
+
+.ContCalculadora {
+ border: 3px solid var(--color-secondary);
+	height: 95vh;
+	max-width: 25vw;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 7vh 39vh 49vh;
+	padding: 0px;
+}
+
+/* Botones adicionales */
+.ContBtnAdicionales {
+ display: grid;
+	grid-template-columns: 6fr 4fr;
+	grid-template-rows: 1fr;
+}
+
+#BtnDisminuir {
+ width: 22%;
+}
+
+.BtnIzquierda {
+ display: grid;
+	justify-items: start;
+}
+
+.BtnDerecha {
+ display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.BtnAdicional {
+	background: var(--color-primary);
+	color: var(--color-text);
+	border: var(--border-style);
+	font-size: var(--icons-size);
+}
+
+/* Cuadro de texto para resultado */
+.ContResultado {
+	border: var(--border-style);
+	background: var(--color-primary);
+	display: grid;
+	align-content: center;
+}
+
+.Resultado {
+	position: relative;
+	font-size: var(--text-size-resultado);
+ color: var(--color-text);
+	background: var(--color-primary);
+	border: var(--border-style);
+	text-align: end;
+ caret-color: var(--color-secondary);
+	margin: 0px 5px;
+}
+
+.Resultado:focus {
+ outline: none;
+}
+
+.Resultado:after {
+}
+
+/* botones para las operaciones */
+.ContOperaciones {
+ border: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+ background: var(--color-operaciones);
+}
+
+.BtnOperaciones {
+ color: var(--color-text);
+	background: var(--color-operaciones);
+	border: var(--border-style);
+	font-size: var(--text-size-operaciones);
+}
+
+/* botones con funcion */ 
+.BtnClear {
+ color: var(--color-error);
+}
+
+.BtnFuncion {
+ color: var(--color-secondary);
+}
