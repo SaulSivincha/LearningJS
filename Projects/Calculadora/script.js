@@ -1,6 +1,8 @@
 // Variables globales
 let botones;
 let expresion;
+let expresionParaEvaluar = "";
+let expresionParaUsuario = "";
 
 document.addEventListener("DOMContentLoaded", () => {
     botones = document.querySelectorAll(".BtnOperaciones");
@@ -26,46 +28,43 @@ function asignarBotones() {
 function escribirOperacion() {
     botones.forEach((boton) => {
         boton.addEventListener("click", () => {
-            mostrarExpresion(boton);
-            expresionToEvaluar(boton);
+            calcularExpresion(boton);
         });
     });
 }
 
-function mostrarExpresion(boton) {
+function calcularExpresion(boton) {
     if (boton.value === "C") {
+        expresionParaEvaluar = "";
         expresion.value = "";
     } else if (boton.value === "Del") {
+        expresionParaEvaluar = expresion.value.slice(0, -1);
         expresion.value = expresion.value.slice(0, -1);
     } else if (boton.value === "/") {
+        expresionParaEvaluar += "/";
         expresion.value += "÷";
     } else if (boton.value === "*") {
         expresion.value += "x";
+        expresionParaEvaluar += "*";
     } else if (boton.value === "expand") {
         console.log("expandiendo calculadora"); //boton para expandir la calculadora
     } else if (boton.value === "=") {
-        expresionEvaluada();
+        try {
+            if (expresionParaEvaluar === undefined){
+              throw new Error("Valor Undefined");
+            }
+            expresion.value = eval(expresionParaEvaluar);
+        } catch (error) {
+            console.error(error.message);
+            expresion.value = "Expresion Incorrecta";
+            setTimeout(() => {
+              expresion.value = "";
+            }, 2000);
+        }
     } else {
+        expresionParaEvaluar += boton.value;
         expresion.value += boton.value;
     }
-}
 
-function expresionEvaluada() {
-    expresion.value = eval(expresionToEvaluar());
-}
-
-function expresionToEvaluar(boton) {
-    let expresionParaEvaluar = "";
-    if (boton.value === "C") {
-       expresionParaEvaluar = expresionParaEvaluar;
-    } else if (boton.value === "Del") {
-       expresionParaEvaluar  = expresionParaEvaluar;
-    } else if (boton.value === "expand") {
-       expresionParaEvaluar = expresionParaEvaluar;
-    } else {
-       expresionParaEvaluar += boton.value;
-    }
-    console.log(expresionParaEvaluar);
-    return expresionParaEvaluar;
 }
 
