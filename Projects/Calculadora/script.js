@@ -96,3 +96,27 @@ function eliminarCeros(expresion) {
  return expresion;
 }
 
+
+// funciones para botones adicionales
+const contCalculadora = document.querySelector(".ContCalculadora");
+const btnDisminuir = document.getElementById("BtnDisminuir");
+
+btnDisminuir.addEventListener("mousedown", () => {                 
+    contCalculadora.style.position = "absolute";              
+
+    document.addEventListener("mousemove", (event) => {      
+        contCalculadora.style.top = `${event.clientY}px`;   // Se agrega 'px'
+        contCalculadora.style.left = `${event.clientX}px`;  // Cambié 'bottom' por 'left' para posicionar correctamente
+        contCalculadora.style.width = "50%";
+					   contCalculadora.style.height = "50%";
+				});
+});
+
+
+
+
+
+
+
+
+
