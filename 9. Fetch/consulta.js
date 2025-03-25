@@ -12,7 +12,7 @@ async function obtenerPokeApi() {
 	 
 		// si la respueta es false entonces se lanza una exception para luego transferir el control a catch
 		if (!response.ok){
-   throw new Error(`Error al obtener los datos`);
+   throw new Error(`Error al obtener los datos`);// se lanza una expcecion 
 		}
   
   const pokemon = await response.json();
@@ -23,7 +23,9 @@ async function obtenerPokeApi() {
 	}
 }
 
-obtenerPokeApi();
+obtenerPokeApi().catch(error => {
+	console.error("Se encontro un error:", error.message);
+});
 
 
 async function obtenerPokemon(pokemon){

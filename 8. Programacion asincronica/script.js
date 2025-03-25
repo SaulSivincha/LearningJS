@@ -2,13 +2,13 @@ let pedido = prompt("Ingrese su pedido")
 
 function obtenerPedido() {
 	return new Promise((resolve, reject) => {
-  setTimeout(() => {
-   const estadoPedido = false;
-			if (estadoPedido) {
-    resolve(`Pedido: ${pedido}.`);
-			} else {
-    reject("Error al obtener el pedido");
-			}
+  		setTimeout(() => {
+   			const estadoPedido = false;
+				if (estadoPedido) {
+    				resolve(`Pedido: ${pedido}.`);
+				} else {
+    				reject("Error al obtener el pedido");
+				}
 		}, 5000);
 	});
 }
