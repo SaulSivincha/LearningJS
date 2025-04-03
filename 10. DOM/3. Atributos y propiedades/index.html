@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GatoClasificador</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <header><h1>Claficador de gatos en naranjosos y no naranjosos</h1></header>
+    <header><h1>Clasificador de gatos en naranjosos y no naranjosos</h1></header>
     
     <main>
         <figure>
-            <img src="./images/gato1.jpeg" alt="imagengato1">
-            <figcaption>Gato no naranjoso</figcaption> 
+            <span>
+                <img id="imagenGato" src="" alt="">
+                <button id="btnAtras"><</button>
+                <button id="btnAdelante">></button>
+            </span>
+            <figcaption id="descripcionGato">Gato no naranjoso</figcaption> 
         </figure>
     </main>
+
+    <footer>
+        <p>Esta es una página de gatos, no tiene derechos de autor</p>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
-
-<footer>
-    <p>Esta es una pagina de gatos, no tiene derechos de autor</p>
-</footer>
-
-<script src="./script.js"></script>
 </html>
