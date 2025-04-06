@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do tasks</title>
+</head>
+<body>
+    <header>
+        <h2>Pagina para que listes las cosas que tienes por hacer, vago</h2>
+    </header>
+
+    <main>
+        <section>
+            <fieldset>
+                <legend>Lista de tareas pendientes</legend>
+                <div id="TasksContainer">
+
+                </div>
+
+                <button id="Agregar">Agregar</button>
+            </fieldset>
+
+            <template id="TaskTemplate">
+                <div class="Task">
+                    <input type="text" id="Task1" value="Descanonizar el Sally de una vez" disabled />
+                    <button class="Terminar">Terminada</button>
+                    <button class="Editar">Editar</button>
+                </div>
+            </template>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
