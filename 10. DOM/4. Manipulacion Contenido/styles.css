@@ -1,0 +1,69 @@
+body {
+ text-align: center;
+}
+
+header {
+ position: absolute;
+ top: 20vh;
+ left: 20vw;
+ color: #1C4A64;
+ font-size: 20px;
+}
+
+main {
+ display: grid;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+}
+
+fieldset {
+ border: 2px solid #1C4A64;
+}
+
+legend {
+ color: #1C4A64;
+ font-size: 20px;
+}
+
+#TasksContainer{
+ padding: 10px;
+}
+
+.Task {
+ padding: 10px 0px;
+ font-size: 16px;
+}
+
+input {
+ border: none;
+ border-bottom: 2px solid #1C4A64; 
+ font-size: inherit;
+}
+
+input:focus {
+ border-bottom: 2px solid #FF5733; 
+ outline: none; 
+}
+
+.Terminar, .Editar, #Agregar {
+ border: none;
+ color: white;
+ font-size: inherit;
+ text-align: center;
+ border-radius: 10%;
+ height: 10%;
+ padding: 5px 10px;
+}
+
+.Terminar {
+ background-color: red;
+}
+  
+.Editar {
+ background-color: #F4B335;
+}
+
+#Agregar {
+ background-color: #51A14D;
+}
