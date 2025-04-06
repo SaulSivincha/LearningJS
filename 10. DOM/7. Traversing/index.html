@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Commentaries</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Random Commentaries</h1>
+  </header>
+
+  <main>
+    <button id="btn-comment">Comment</button>
+  </main>
+
+  <template id="template-commentary">
+    <section class="Commentary">
+      <input type="text" class="comment-text" />
+      <button class="btn-save">Save</button>
+      <button class="btn-reply">Reply</button>
+    </section>
+  </template>
+
+  <template id="template-reply">
+    <div class="Reply">
+      <input class="reply-text" type="text"/>
+      <button class="btn-reply-save">Save</button>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
