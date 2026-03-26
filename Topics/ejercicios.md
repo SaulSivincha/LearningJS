@@ -217,36 +217,84 @@ El sistema debe limpiar los datos, formatearlos correctamente y validar que sean
 - Validaciones con `if`
 - Uso de funciones con `return`
 - Uso de `console.log`
+- uso de `includes` para validar el email
 - Usa un callback para la funcion que imprimira los datos, como recordatorio del tema anterior
 - la funcion de formatear nombre deberia colocar en formato correcto esta entrada "(5 espacios en blanco seguido) sAuL anDRE sivincha machaca "
 
 ---
 
-## Ejercicio 2: Sistema de análisis de texto
+## Ejercicio 2: Sistema básico de limpieza de nombres
 
-Desarrolla un programa que reciba un texto y analice su contenido.
+Una empresa envio invitaciones a sus trabajadores para una fiesta, pero por error se targiversaron los datos y debes de limpiarlos
+
+---
+
+### Ejemplo de entrada:
+
+"admin juan perez invitado "
+
+### Salida esperada:
+
+Trabajador: Juan Perez
+
+---
 
 ### El sistema debe:
 
-- Contar la cantidad de caracteres
-- Contar la cantidad de palabras
-- Verificar si incluye una palabra clave
-- Reemplazar una palabra por otra
+1. Limpiar los espacios:
+   - Usar `trim` para eliminar espacios al inicio y final
 
-### Ejemplo esperado:
+2. Separar el texto:
+   - Usar `split(" ")` para convertir el texto en un array
 
-Texto: "Hola mundo desde JavaScript"  
-Palabras: 4  
-Incluye "mundo": sí  
-Texto modificado: "Hola universo desde JavaScript"
+3. Eliminar palabras no válidas:
+   - Usar `filter` unicamente para eliminar:
+     - espacios vacíos acumulados
+     - la palabra `"invitado"`
+
+4. Formatear el nombre:
+   - Usar `map` para:
+     - convertir a minúsculas
+     - capitalizar la primera letra
+
+5. Unir nuevamente el nombre:
+   - Usar `join(" ")`
+
+6. Validar el resultado:
+   - Usar `length` para verificar la entrada no este vacia
+
+7. Reemplazo opcional:
+   - Si el nombre contiene `"admin"` o `"usuario"`, reemplazarlo por `"trabajador"` usando `replace`
+
+---
 
 ### Elementos / sintaxis obligatoria
 
-- `includes`
-- `split`
-- `length`
-- `replace`
+- Uso de `trim`
+- Uso de `split`
+- Uso de `filter`
+- Uso de `map`
+- Uso de `join`
+- Uso de `length`
+- Uso de `replace`
 - Funciones con `return`
 - Uso de `console.log`
 
+---
+
+### Restricciones
+
+- No usar múltiples `if` innecesarios
+- Usar métodos de arrays obligatoriamente
+- El código debe funcionar con diferentes nombres
+
+### Entradas
+- "   admin   lopez   invitado   "
+- "(aqui hay 3 espacios en blanco) maria lopez   "
+- "ADMIN maria LOPEZ invitado"
+
+### Salidas
+- Trabajador: Usuario Lopez
+- Trabajador: Maria Lopez
+- Trabajador: Usuario Maria Lopez
 ---
