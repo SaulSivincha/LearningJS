@@ -26,13 +26,12 @@ function formatearDatos(persona) {
   persona.nombre = persona.nombre
     .trim()
     .split(" ")
-    .filter((palabra) => palabra !== "")
+    .filter((palabra) => palabra !== "") // filter se queda con las palabras q cumplen la condicion
+    //palabra representa cada palabra del array
     .map((palabra) => palabra[0].toUpperCase() + palabra.slice(1).toLowerCase())
     .join(" ");
-
-  persona.email = persona.email.trim();
-  persona.edad = Number(persona.edad);
-
+  persona.email.trim();
+  persona.edad.Number();
   return persona;
 }
 
