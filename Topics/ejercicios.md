@@ -117,6 +117,9 @@ Durante el recorrido, si encuentras usuarios con información incompleta, deber�
   - por qué ocurrió cada caso
 
 ---
+
+## Funciones
+
 ## Ejercicio 1: Sistema de cotización para una tienda
 
 Una tienda maneja tres tipos de clientes: `regular`, `frecuente` y `vip`.
@@ -152,16 +155,21 @@ cotización detallada.
 
 ### Formato de salida esperado:
 
-   Cliente: Juan Pérez (vip)
-   ------------------------
-   Laptop         $1200.00
-   Mouse            $25.00
-   ------------------------
-   Subtotal:      $1225.00
-   Descuento:      $245.00
-   Total:          $980.00
+Cliente: Juan Pérez (vip)
+
+---
+
+Laptop $1200.00
+Mouse $25.00
+
+---
+
+Subtotal: $1225.00
+Descuento: $245.00
+Total: $980.00
 
 ### Elementos que deberás usar para resolverlo
+
 - Declaración de función, expresión de función y arrow function
 - `...args` para recibir los productos
 - Parámetros por defecto
@@ -171,5 +179,74 @@ cotización detallada.
 - Callbacks
 - Scope dentro de funciones
 - `console.log`
+
+---
+
+## Strings, Numbers y utilidades básicas
+
+## Ejercicio 1: Sistema de formateo de usuarios
+
+Desarrolla un programa que reciba información de usuarios (nombre completo, email y edad) y genere un formato limpio y estandarizado para mostrar en pantalla.
+
+El sistema debe limpiar los datos, formatearlos correctamente y validar que sean coherentes antes de mostrarlos.
+
+### El sistema debe:
+
+1. Limpiar los datos:
+   - Eliminar espacios innecesarios (`trim`)
+   - Convertir el nombre a formato correcto (Primera letra mayúscula)
+   - Convertir el email a minúsculas
+
+2. Validar los datos:
+   - El nombre no debe estar vacío
+   - El email debe incluir "@"
+   - La edad debe ser un número válido
+
+3. Formatear la salida:
+   - Usar template literals
+   - Mostrar algo como:
+     Usuario: Juan Perez
+     Email: juan@email.com
+     Edad: 20 años
+
+### Elementos / sintaxis obligatoria
+
+- Métodos de string: `trim`, `toLowerCase`, `slice`
+- Template literals `` ` ``
+- Conversión de tipos (`Number`)
+- Validaciones con `if`
+- Uso de funciones con `return`
+- Uso de `console.log`
+- Usa un callback para la funcion que imprimira los datos, como recordatorio del tema anterior
+- la funcion de formatear nombre deberia colocar en formato correcto esta entrada "(5 espacios en blanco seguido) sAuL anDRE sivincha machaca "
+
+---
+
+## Ejercicio 2: Sistema de análisis de texto
+
+Desarrolla un programa que reciba un texto y analice su contenido.
+
+### El sistema debe:
+
+- Contar la cantidad de caracteres
+- Contar la cantidad de palabras
+- Verificar si incluye una palabra clave
+- Reemplazar una palabra por otra
+
+### Ejemplo esperado:
+
+Texto: "Hola mundo desde JavaScript"  
+Palabras: 4  
+Incluye "mundo": sí  
+Texto modificado: "Hola universo desde JavaScript"
+
+### Elementos / sintaxis obligatoria
+
+- `includes`
+- `split`
+- `length`
+- `replace`
+- Funciones con `return`
+- Uso de `console.log`
 
 ---

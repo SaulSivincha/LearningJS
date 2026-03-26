@@ -84,26 +84,14 @@ function generarCotizacion(cliente, ...productos) {
 }
 
 try {
-  console.log("=== Cotización 1 ===");
+  console.log("Cotización 1");
   generarCotizacion(cliente1, producto1, producto2);
 
-  console.log("\n=== Cotización 2 ===");
+  console.log("Cotización 2");
   generarCotizacion(cliente2, producto2, producto3);
 
-  console.log("\n=== Cotización 3 ===");
+  console.log("Cotización 3");
   generarCotizacion(cliente3, producto1, producto2, producto3);
 } catch (e) {
   console.log("Error: " + e.message);
 }
-
-function holaMundo(){
-    console.log("hola mundo");
-}
-
-function() {
-    console.log("hola mundo");
-}
-
-() => {
-    console.log("hola mundo");
-};
