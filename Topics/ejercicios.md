@@ -290,7 +290,6 @@ Trabajador: Juan Perez
 
 ---
 
-
 ## Arrays
 
 ## Ejercicio 1: Gestión de lista de tareas (enfoque React)
@@ -298,6 +297,7 @@ Trabajador: Juan Perez
 Una aplicación de tareas necesita procesar una lista de pendientes antes de mostrarlas en pantalla. Debes trabajar con un array de tareas y generar nuevas versiones del array sin modificar el original, tal como se hace al actualizar estado en React.
 
 Cada tarea tiene:
+
 - id
 - titulo
 - completada
@@ -318,11 +318,12 @@ Cada tarea tiene:
 8. Crear una copia del array original usando spread `...`
 9. Agregar una nueva tarea a la copia sin modificar el array original
 10. Mostrar:
-   - array original
-   - tareas pendientes
-   - tarea encontrada
-   - array transformado
-   - nuevo array con la tarea agregada
+
+- array original
+- tareas pendientes
+- tarea encontrada
+- array transformado
+- nuevo array con la tarea agregada
 
 ### Elementos / sintaxis obligatoria
 
@@ -350,6 +351,7 @@ Cada tarea tiene:
 Una tienda virtual necesita preparar un catálogo de productos para renderizarlo más adelante en una interfaz hecha con React. Debes tomar un array de productos y generar nuevas listas según filtros, búsquedas y transformaciones.
 
 Cada producto tiene:
+
 - id
 - nombre
 - precio
@@ -368,7 +370,7 @@ Cada producto tiene:
 8. Crear un nuevo array usando `map` con una propiedad extra llamada `etiqueta`
    - Ejemplo: `"Mouse - S/ 80"`
 9. Ordenar una copia del array por precio de menor a mayor usando `sort` con comparator
-10. Crear una nueva lista combinando los productos disponibles con `map` y `filter`, lista para mostrarse en tarjetas
+10. Crear una nueva lista combinando los productos disponibles con `filter`, lista para mostrarse en tarjetas
 
 ### Elementos / sintaxis obligatoria
 
@@ -390,7 +392,6 @@ Cada producto tiene:
 ### Restricciones
 
 - No modificar directamente el array original al ordenar
-- Debes usar `map` para preparar la información visual
 - El resultado debe servir como base para renderizar una lista en React
 
 ---
@@ -400,6 +401,7 @@ Cada producto tiene:
 Una tienda virtual guarda los productos del carrito en un array. Debes simular operaciones comunes de una aplicación React: agregar productos, eliminar productos, actualizar cantidades y calcular el total, todo sin mutar el array original.
 
 Cada producto del carrito tiene:
+
 - id
 - nombre
 - precio
@@ -412,17 +414,16 @@ Cada producto del carrito tiene:
 3. Agregar un nuevo producto creando un nuevo array con spread `...`
 4. Eliminar un producto por `id` usando `filter`
 5. Actualizar la cantidad de un producto usando `map`
-   - Si el `id` coincide, debe devolverse un nuevo objeto con la cantidad cambiada
 6. Calcular el total del carrito usando `reduce`
-7. Calcular cuántos productos diferentes hay usando `length`
-8. Verificar si existe al menos un producto con cantidad mayor a 1 usando `some`
-9. Verificar si todos los productos tienen precio mayor a 0 usando `every`
-10. Mostrar:
-   - carrito original
-   - carrito con producto agregado
-   - carrito con producto eliminado
-   - carrito con cantidad actualizada
-   - total final
+7. Verificar si existe al menos un producto con cantidad mayor a 1 usando `some`
+8. Verificar si todos los productos tienen precio mayor a 0 usando `every`
+9. Mostrar:
+
+- carrito original
+- carrito con producto agregado
+- carrito con producto eliminado
+- carrito con cantidad actualizada
+- total final
 
 ### Elementos / sintaxis obligatoria
 
