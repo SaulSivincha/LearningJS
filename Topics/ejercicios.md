@@ -445,3 +445,143 @@ Cada producto del carrito tiene:
 - Cada cambio debe generar un nuevo array
 - Si actualizas un producto, debes devolver un nuevo objeto
 - El ejercicio debe resolverse con mentalidad de estado inmutable
+
+---
+
+## Objetos
+
+## Ejercicio 1: Perfil de usuario para una aplicación (enfoque React)
+
+Una aplicación necesita mostrar la información de un usuario en pantalla y preparar una versión actualizada de sus datos sin modificar el objeto original. Debes trabajar con un objeto que represente un perfil de usuario, tal como luego se haría con `props` o `state` en React.
+
+Cada usuario tiene:
+
+- id
+- nombre
+- email
+- edad
+- activo (booleano)
+
+### El sistema debe:
+
+1. Crear un objeto literal con los datos de un usuario
+2. Validar que el nombre y el email no estén vacíos
+3. Crear una función que reciba el objeto usuario y devuelva un mensaje en consola de todas sus propiedades
+4. Agregar una nueva propiedad llamada `rol`
+5. Cambiar el valor de la propiedad `activo`
+6. Eliminar una propiedad que ya no se necesite
+7. Mostrar:
+   - objeto original
+   - objeto copiado
+   - mensaje final del usuario
+
+### Elementos / sintaxis obligatoria
+
+- Agregar propiedades
+- Modificar propiedades
+- Eliminar propiedades con destructuring y rest
+- Uso de spread `...`
+
+### Restricciones
+
+- Debes crear una copia antes de trabajar la versión final
+- No debes depender de variables globales dentro de la función
+- El código debe funcionar con diferentes usuarios
+
+---
+
+## Ejercicio 2: Panel de configuración de una cuenta (enfoque React)
+
+Una aplicación tiene un objeto de configuración que representa las preferencias de una cuenta. Debes leer sus propiedades, recorrerlas y generar una nueva configuración actualizada sin mutar el objeto original.
+
+El objeto de configuración tiene:
+
+- tema
+- idioma
+- notificaciones
+- privacidad
+
+### El sistema debe:
+
+1. Crear un objeto con varias configuraciones
+2. Mostrar todas las claves usando `Object.keys`
+3. Mostrar todos los valores usando `Object.values`
+4. Mostrar todas las entradas usando `Object.entries`
+5. Recorrer las configuraciones e imprimir cada clave con su valor
+6. Crear una nueva copia del objeto usando spread `...`
+7. Actualizar al menos dos propiedades de la copia
+8. Verificar que el objeto original no haya cambiado
+9. Desestructurar al menos dos propiedades del objeto
+10. Mostrar:
+
+- configuración original
+- configuración actualizada
+- claves, valores y entradas
+
+### Elementos / sintaxis obligatoria
+
+- Uso de `Object.keys`
+- Uso de `Object.values`
+- Uso de `Object.entries`
+- Recorrido de objetos
+- Desestructuración de objetos
+- Uso de spread `...`
+- Copia superficial
+- Uso de `console.log`
+
+### Restricciones
+
+- No modificar directamente el objeto original
+- Debes usar desestructuración al menos una vez
+- Debes mostrar claramente la diferencia entre original y copia
+
+---
+
+## Ejercicio 3: Actualización de perfil con datos anidados (enfoque React)
+
+Una aplicación guarda el perfil de un usuario en un objeto que contiene información anidada. Debes actualizar algunos datos sin mutar el objeto original, tal como se hace al actualizar estado anidado en React.
+
+Cada perfil tiene:
+
+- id
+- nombre
+- contacto
+  - email
+  - telefono
+- direccion
+  - ciudad
+  - pais
+- preferencias
+  - tema
+  - notificaciones
+
+### El sistema debe:
+
+1. Crear un objeto con información anidada
+2. Mostrar el email del usuario
+3. Mostrar la ciudad del usuario
+4. Crear una copia del objeto principal usando spread `...`
+5. Actualizar solo el email dentro de `contacto` sin mutar el original
+6. Actualizar solo el tema dentro de `preferencias` sin mutar el original
+7. Crear una función que reciba el perfil y devuelva un resumen del usuario
+8. Comparar el objeto original con el actualizado
+9. Mostrar:
+   - perfil original
+   - perfil actualizado
+   - resumen del usuario
+
+### Elementos / sintaxis obligatoria
+
+- Objetos anidados
+- Acceso a propiedades anidadas
+- Uso de spread `...`
+- Copia superficial
+- Referencias vs copias
+- Uso de funciones con `return`
+- Uso de `console.log`
+
+### Restricciones
+
+- No modificar directamente el objeto original
+- Para actualizar un dato anidado, debes copiar también el objeto interno correspondiente
+- El ejercicio debe resolverse con mentalidad de inmutabilidad, como en React
