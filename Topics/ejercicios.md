@@ -489,34 +489,46 @@ Cada usuario tiene:
 - El código debe funcionar con diferentes usuarios
 
 ---
+## Ejercicio 2: Configuración de una cuenta de usuario 
 
-## Ejercicio 2: Panel de configuración de una cuenta (enfoque React)
-
-Una aplicación tiene un objeto de configuración que representa las preferencias de una cuenta. Debes leer sus propiedades, recorrerlas y generar una nueva configuración actualizada sin mutar el objeto original.
+Una aplicación guarda la configuración de la cuenta de un usuario dentro de un objeto. Debes mostrar su contenido y crear una versión actualizada de esa configuración sin modificar el objeto original, tal como luego se haría al actualizar `state` en React.
 
 El objeto de configuración tiene:
 
-- tema
-- idioma
-- notificaciones
-- privacidad
+El objeto de configuración tiene:
+
+- `tema`: modo visual de la aplicación, por ejemplo `"claro"` o `"oscuro"`
+- `idioma`: idioma en el que se mostrará la interfaz, por ejemplo `"es"` o `"en"`
+- `notificaciones`: indica si el usuario desea recibir notificaciones (`true` o `false`)
+- `privacidad`: nivel de visibilidad de la cuenta, por ejemplo `"publica"` o `"privada"`
 
 ### El sistema debe:
 
-1. Crear un objeto con varias configuraciones
-2. Mostrar todas las claves usando `Object.keys`
-3. Mostrar todos los valores usando `Object.values`
-4. Mostrar todas las entradas usando `Object.entries`
-5. Recorrer las configuraciones e imprimir cada clave con su valor
-6. Crear una nueva copia del objeto usando spread `...`
-7. Actualizar al menos dos propiedades de la copia
-8. Verificar que el objeto original no haya cambiado
-9. Desestructurar al menos dos propiedades del objeto
-10. Mostrar:
+1. Crear un objeto literal con la configuración de una cuenta.
+2. Mostrar todas sus propiedades en consola recorriendo el objeto, imprimiendo cada clave junto con su valor.
+3. Mostrar por separado:
+   - las claves del objeto usando `Object.keys`
+   - los valores del objeto usando `Object.values`
+   - las entradas del objeto usando `Object.entries`
 
-- configuración original
-- configuración actualizada
-- claves, valores y entradas
+4. Desestructurar al menos dos propiedades del objeto para guardarlas en variables independientes.
+   - Por ejemplo, extraer `tema` e `idioma` para poder usarlos directamente sin escribir siempre `configuracion.tema` o `configuracion.idioma`.
+
+5. Crear una copia del objeto usando spread `...`.
+   - La copia debe guardarse en otra variable, para que el objeto original permanezca igual.
+
+6. Actualizar al menos dos propiedades en la copia.
+   - Por ejemplo:
+     - cambiar el `tema` de `"oscuro"` a `"claro"`
+     - cambiar `notificaciones` de `true` a `false`
+
+7. Mostrar en consola:
+   - la configuración original
+   - la configuración actualizada
+
+8. Comparar visualmente ambos resultados para comprobar que:
+   - el objeto original conserva sus valores iniciales
+   - solo la copia contiene los cambios realizados
 
 ### Elementos / sintaxis obligatoria
 
@@ -533,13 +545,12 @@ El objeto de configuración tiene:
 
 - No modificar directamente el objeto original
 - Debes usar desestructuración al menos una vez
-- Debes mostrar claramente la diferencia entre original y copia
+- La versión actualizada debe crearse a partir de una copia
 
 ---
+ ## Ejercicio 3: Perfil de usuario con información anidada (enfoque React)
 
-## Ejercicio 3: Actualización de perfil con datos anidados (enfoque React)
-
-Una aplicación guarda el perfil de un usuario en un objeto que contiene información anidada. Debes actualizar algunos datos sin mutar el objeto original, tal como se hace al actualizar estado anidado en React.
+Una aplicación guarda el perfil de un usuario en un objeto que contiene otros objetos dentro. Debes acceder a esa información y crear una versión actualizada del perfil sin modificar el original, tal como se hace al actualizar datos anidados en React.
 
 Cada perfil tiene:
 
@@ -558,14 +569,15 @@ Cada perfil tiene:
 ### El sistema debe:
 
 1. Crear un objeto con información anidada
-2. Mostrar el email del usuario
-3. Mostrar la ciudad del usuario
+2. Mostrar en consola:
+   - el nombre del usuario
+   - su email
+   - su ciudad
+3. Crear una función que reciba el perfil y devuelva un resumen del usuario
 4. Crear una copia del objeto principal usando spread `...`
-5. Actualizar solo el email dentro de `contacto` sin mutar el original
-6. Actualizar solo el tema dentro de `preferencias` sin mutar el original
-7. Crear una función que reciba el perfil y devuelva un resumen del usuario
-8. Comparar el objeto original con el actualizado
-9. Mostrar:
+5. Actualizar solo el email dentro de `contacto` sin modificar el objeto original
+6. Actualizar solo el tema dentro de `preferencias` sin modificar el objeto original
+7. Mostrar en consola:
    - perfil original
    - perfil actualizado
    - resumen del usuario
@@ -583,5 +595,5 @@ Cada perfil tiene:
 ### Restricciones
 
 - No modificar directamente el objeto original
-- Para actualizar un dato anidado, debes copiar también el objeto interno correspondiente
-- El ejercicio debe resolverse con mentalidad de inmutabilidad, como en React
+- Para actualizar una propiedad anidada, debes copiar también el objeto interno correspondiente
+- El perfil actualizado debe conservar las demás propiedades sin cambios
