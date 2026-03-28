@@ -548,7 +548,8 @@ El objeto de configuración tiene:
 - La versión actualizada debe crearse a partir de una copia
 
 ---
- ## Ejercicio 3: Perfil de usuario con información anidada (enfoque React)
+
+## Ejercicio 3: Perfil de usuario con información anidada 
 
 Una aplicación guarda el perfil de un usuario en un objeto que contiene otros objetos dentro. Debes acceder a esa información y crear una versión actualizada del perfil sin modificar el original, tal como se hace al actualizar datos anidados en React.
 
@@ -573,11 +574,9 @@ Cada perfil tiene:
    - el nombre del usuario
    - su email
    - su ciudad
-3. Crear una función que reciba el perfil y devuelva un resumen del usuario
-4. Crear una copia del objeto principal usando spread `...`
-5. Actualizar solo el email dentro de `contacto` sin modificar el objeto original
-6. Actualizar solo el tema dentro de `preferencias` sin modificar el objeto original
-7. Mostrar en consola:
+3. Crear una copia usnado `...` y actualizar solo el email dentro de `contacto` sin modificar el objeto original
+5. Actualizar solo el tema dentro de `preferencias` sin modificar el objeto original
+6. Mostrar en consola:
    - perfil original
    - perfil actualizado
    - resumen del usuario
