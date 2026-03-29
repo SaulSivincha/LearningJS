@@ -396,7 +396,7 @@ Cada producto tiene:
 
 ---
 
-## Ejercicio 3: Carrito de compras con actualización inmutable (enfoque React)
+## Ejercicio 3: Carrito de compras con actualización inmutable 
 
 Una tienda virtual guarda los productos del carrito en un array. Debes simular operaciones comunes de una aplicación React: agregar productos, eliminar productos, actualizar cantidades y calcular el total, todo sin mutar el array original.
 

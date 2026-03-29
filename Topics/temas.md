@@ -79,13 +79,7 @@ Spread en objetos.
 Copia superficial.
 Referencias vs copias.
 Objetos anidados. React usa objetos como props y estado, y su documentación oficial insiste en no mutar directamente los objetos guardados en state: hay que crear una copia y luego reemplazar el estado.
-8) Inmutabilidad en práctica
-Qué significa mutar un array u objeto.
-Cómo crear copias con spread.
-Cómo actualizar una propiedad sin alterar el original.
-Cómo actualizar un elemento dentro de un array.
-Cómo actualizar objetos anidados sin mutar. Este punto merece énfasis aparte porque React lo usa constantemente al trabajar con estado. La guía oficial de React lo remarca tanto para objetos como para arrays.
-9) Expresiones modernas de uso diario
+8) Expresiones modernas de uso diario
 Destructuring.
 Spread syntax.
 Rest syntax.
@@ -93,7 +87,7 @@ Optional chaining ?.
 Nullish coalescing ??
 Short-circuiting con && y ||.
 Asignación por defecto. Estos temas no siempre aparecen como “capítulo único”, pero forman parte del JavaScript moderno que React usa a diario en JSX, props y estado. React muestra objetos dentro de llaves, lógica condicional y acceso a valores JavaScript en JSX.
-10) Módulos
+9) Módulos
 Qué es un módulo.
 export.
 export default.
@@ -102,7 +96,7 @@ Importaciones nombradas.
 Importaciones por defecto.
 Renombrar imports.
 Organización básica en archivos. Esto sí es obligatorio para React moderno. La guía oficial de React usa export default e import, y React recomienda un entorno JavaScript modular para usar JSX, dividir archivos y traer paquetes desde npm.
-11) Asincronía
+10) Asincronía
 Qué es código síncrono vs asíncrono.
 Callbacks.
 Promesas.
@@ -113,7 +107,7 @@ async.
 await.
 Manejo de errores en async con try/catch.
 Entender que async devuelve una Promise. MDN documenta que las promesas son objetos a los que se les adjuntan callbacks, y que async/await simplifica el consumo de APIs basadas en promesas. await solo puede usarse dentro de funciones async o al nivel superior de un módulo.
-12) JSON y consumo de APIs
+11) JSON y consumo de APIs
 Qué es JSON.
 Diferencia entre objeto JS y JSON.
 JSON.parse.
@@ -123,7 +117,7 @@ Leer respuestas HTTP.
 Convertir respuesta a JSON.
 Manejar errores de red y de parsing.
 async/await con fetch. Para aplicaciones React reales, esto es muy importante. MDN explica JSON como formato común para transmitir datos en apps web, y Fetch como la API moderna para hacer peticiones HTTP; además, las peticiones suelen devolver JSON que luego se usa para actualizar la UI.
-13) DOM y eventos, pero a nivel básico
+12) DOM y eventos, pero a nivel básico
 Qué es el DOM.
 Seleccionar elementos.
 Leer y cambiar texto o atributos.
